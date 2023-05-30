@@ -22,10 +22,13 @@ func()
 Here's what happens when the above code runs:
 
 `test.pkl` stores a pandas DataFrame:
-       a     b
-    0  1     4
-    1  2   foo
-    2  3     6
+
+```
+   a     b
+0  1     4
+1  2   foo
+2  3     6
+```
 
 Since column `b` contains a string, 'foo', we get an error when adding it to `a`:
 
