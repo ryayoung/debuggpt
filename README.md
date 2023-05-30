@@ -6,7 +6,7 @@ Like many other solutions, `debuggpt` takes advantage of high-context language m
 
 _**The difference is in the prompt.**_
 
-`debuggpt` is a code-introspection tool that provides GPT models with a **comprehensive report of the state of your program** at the moment an error is thrown.
+### `debuggpt` will provide a GPT model with a comprehensive report on the state of your program at the moment an error is thrown.
 
 ## Usage
 
