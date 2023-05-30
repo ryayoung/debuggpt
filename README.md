@@ -38,7 +38,7 @@ This is tricky to debug because:
 
 But GPT-4 knew *all* of this. **Including #3.**
 
-Here's its response:
+### GPT-4's Response
 
 > The error "TypeError: unsupported operand type(s) for +: 'int' and 'str'" is occurring because you are trying to add an integer and a string together in line 9 of `test/test_debug.py`:
 > 
@@ -66,7 +66,7 @@ Here's its response:
 
 This is an excellent response.
 
-GPT-4 could see *everything*. 
+The model could see *everything*. 
 - It knew the type and exact contents of `df`, the value returned by `pickle.load`.
 - It could see all relevant code, *not* just the traceback (more on this later)
 - It could see everything that was printed during life of our program (including the original error traceback).
