@@ -24,7 +24,7 @@ If your function fails, the OpenAI model will see (in addition to intro/closing 
    - All of the code in your target function, annotated the same way as above, pointing to the line that caused the error.
    - The names, types, and **values** of all in-scope variables at the time of error
 5. For every remaining call in the traceback stack, if it *isn't* to an external libary, the annotated code context will be provided.
-   - In other words, if your target function makes a call to another function which errors, the annotated source code for *that* function, and all which follow, is provided.
+   - In other words, if your target function makes a call to another function which errors, the annotated source code for *that* function, and those that follow, are provided.
 
 # Example
 
@@ -47,12 +47,11 @@ Here's what happens when the above code runs:
 
 `test.pkl` stores a pandas DataFrame:
 
-```
-   a     b
-0  1     4
-1  2   foo
-2  3     6
-```
+| a | b |
+|---|---|
+| 1 | 4 |
+| 2 | foo |
+| 3 | 6 |
 
 Since column `b` contains a string, 'foo', we get an error when adding it to `a`:
 
