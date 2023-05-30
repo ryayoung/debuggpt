@@ -2,7 +2,31 @@
 
 > The realest AI debugger in the game.
 
-Example code:
+Like many other solutions, `debuggpt` takes advantage of high-context language models like GPT-4 to let the model make informed decisions.
+
+_**The difference is in the prompt.**_
+
+`debuggpt` is a code-introspection tool that provides GPT models with a **comprehensive report of the state of your program** at the moment an error is thrown.
+
+## Usage
+
+**Place a `@debug_gpt` above a function you want to debug, and run your program. That's it.**
+
+If your function fails, the OpenAI model will see (in addition to intro/closing prompts)
+1. The recorded history of all printed outputs (stdout text) for the life of your program
+2. The full, original traceback that would have been shown if you weren't debugging.
+3. The state of your code **leading up to the final call to your target function**
+   - All surrounding lines of code
+     - Annotated with actual line numbers before each line.
+     - Annotated with a comment pointing to the line which called your function
+   - The names, types, and **values** of all in-scope variables at the time of error
+4. The state of your code **within your target function**
+   - All of the code in your target function, annotated the same way as above, pointing to the line that caused the error.
+   - The names, types, and **values** of all in-scope variables at the time of error
+5. For every remaining call in the traceback stack, if it *isn't* to an external libary, the annotated code context will be provided.
+   - In other words, if your target function makes a call to another function which errors, the annotated source code for *that* function, and all which follow, is provided.
+
+# Example
 
 `/test/test_debug.py`:
 
@@ -41,7 +65,7 @@ This is tricky to debug because:
 
 But GPT-4 knew *all* of this. **Including #3.**
 
-### GPT-4's Response:
+## GPT-4's Response:
 
 ---
 
