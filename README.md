@@ -2,11 +2,7 @@
 
 > The realest AI debugger in the game.
 
-Like many other solutions, `debuggpt` takes advantage of high-context language models like GPT-4 to let the model make informed decisions.
-
-_**The difference is in the prompt.**_
-
-### `debuggpt` will provide a GPT model with a comprehensive report on the state of your program at the moment an error is thrown.
+### `debuggpt` will provide GPT-4 a *comprehensive* report on the state of your program at the moment an error occurs. This includes an in-depth walkthrough of the call stack, with *annotated* blocks of source code, the types and *values* of objects at important moments, a history of your printed outputs, and the original traceback.
 
 ## Usage
 
