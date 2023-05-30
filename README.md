@@ -10,7 +10,7 @@ Example code:
 from debuggpt import gpt_debug
 import pickle
 
-@gpt_debug(show_prompt_only=True)
+@gpt_debug
 def func():
     with open('test.pkl', 'rb') as f:
         df = pickle.load(f)
