@@ -2,7 +2,7 @@
 
 > The realest AI debugger in the game.
 
-### `@debug_gpt` sends GPT-4 a *comprehensive* report on the state of your program at the moment an error occurs. The model will see an in-depth walkthrough of the call stack, with *annotated* blocks of source code, the types and *values* of objects at key moments, a history of your printed outputs, the original traceback, and more. The model will understand your program better than you do.
+### `@debug_gpt` sends GPT-4 a comprehensive report on the state of your program at the moment an error occurs. The model will see an in-depth walkthrough of the call stack, with *annotated* blocks of source code, the types and values of objects at key moments, a history of your printed outputs, the original traceback, and more.
 
 ## Usage
 
